@@ -11,9 +11,9 @@ namespace FooService
     {
         private IFooSource FooSource { get; set;}
 
-        public FooController()
+        public FooController(IFooSource fooSource)
         {
-            FooSource = new BasicFooSource();
+            FooSource = fooSource;
         }
 
         public string Get()
